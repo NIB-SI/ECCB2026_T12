@@ -28,3 +28,7 @@ Scientific area: Systems biology, multi-omics integration and modeling
 The tutorial is open to all ECCB2026 participants and is accessible to anyone working with complex biological data. Participants with backgrounds in plant sciences, computational biology, or data management may benefit most, but the content is designed to be broadly relevant across different areas of biology and integrative research.
 ## Prerequisites
 There are no prerequisites to attending.
+
+---
+
+# See Also
