@@ -1,5 +1,4 @@
-# ECCB2026_T12
-Resources for plant sciences: data integration and interpretation tools
+# ECCB 2026 Tutorial 12 - Resources for plant sciences: data integration and interpretation tools
 
 | Time | Session | Description |
 | --- | --- | --- |
