@@ -11,7 +11,8 @@ Participants will then examine comparative genomics methods for identifying orth
 
 By the end of the tutorial, attendees will gain familiarity with plant data standards, comparative genomics methodologies, and knowledge graph approaches, and will gain practical insights into pan-genome evaluation and visualization. The session is aimed at an introductory to intermediate level and will give practical insights for plant scientists, bioinformaticians, and data managers working with diverse plant data.
 
-## Scientific area: Systems biology, multi-omics integration and modeling
+## Scientific area: 
+Systems biology, multi-omics integration and modeling
  
 ## Schedule
 | Time | Session | Description | Contributor |
