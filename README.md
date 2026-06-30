@@ -10,7 +10,8 @@ Plant sciences are rapidly evolving, producing large and heterogeneous datasets 
 Participants will then examine comparative genomics methods for identifying orthologs and functional relationships across species, followed by knowledge graph frameworks that integrate datasets from multiple sources to enable new biological insights. The program continues with recent advances in pan-genome research, emphasizing assessment of genome assemblies, annotations, and variant detection, with attention to sequencing data quality. Strategies for connecting genotypic and phenotypic diversity through presence/absence variation and structural rearrangements will also be presented, alongside effective practices for sharing and visualizing pan-genome information. 
 
 By the end of the tutorial, attendees will gain familiarity with plant data standards, comparative genomics methodologies, and knowledge graph approaches, and will gain practical insights into pan-genome evaluation and visualization. The session is aimed at an introductory to intermediate level and will give practical insights for plant scientists, bioinformaticians, and data managers working with diverse plant data.
-Scientific area: Systems biology, multi-omics integration and modeling
+
+## Scientific area: Systems biology, multi-omics integration and modeling
  
 ## Schedule
 | Time | Session | Description | Contributor |
@@ -19,7 +20,7 @@ Scientific area: Systems biology, multi-omics integration and modeling
 | 13:55–14:35 | Session 1 | Overview of metadata standards in plant sciences and federated discovery | Dr. Pommier |
 | 14:35–15:15 | Session 2 | Approaches for orthology, annotation, and cross-species comparisons | Dr. Zagorščak|
 | 15:15–15:30 | Coffee Break & Networking | | |
-| 15:30–16:10 | Session 3 | Knowledge graph approaches for linking datasets across domains to uncover new biological insights | Dr. Bleker |
+| 15:30–16:10 | Session 3 | Knowledge graph approaches for linking datasets to uncover new biological insights | Dr. Bleker |
 | 16:10–16:50 | Session 4 | Building and Evaluating Plant Pangenomes | Dr. Beier |
 | 16:50–17:10 | Session 5 | Approaches for presenting and disseminating pan-genome information | Dr. Beier |
 | 17:10–17:30 | Discussion & Wrap-up | Open Q&A, summary of key takeaways, and outlook for future development | |
