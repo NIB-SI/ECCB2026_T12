@@ -22,8 +22,8 @@ Systems biology, multi-omics integration and modeling
 | 14:35–15:15 | Session 2 | Approaches for orthology, annotation, and cross-species comparisons | Dr. Zagorščak|
 | 15:15–15:30 | Coffee Break & Networking | | |
 | 15:30–16:10 | Session 3 | Knowledge graph approaches for linking datasets to uncover new biological insights | Dr. Bleker |
-| 16:10–16:50 | Session 4 | Building and Evaluating Plant Pangenomes | Dr. Beier |
-| 16:50–17:10 | Session 5 | Approaches for presenting and disseminating pan-genome information | Dr. Beier |
+| 16:10–16:50 | Session 4 | [Building and Evaluating Plant Pangenomes](https://github.com/NIB-SI/ECCB2026_T12/blob/main/presentations/Session4_Building_Evaluating_Plant_Pangenomes.pptx) | Dr. Beier |
+| 16:50–17:10 | Session 5 | [Approaches for presenting and disseminating pan-genome information](https://github.com/NIB-SI/ECCB2026_T12/blob/main/presentations/Session5_Presenting_Disseminating_Plant_Pangenomes.pptx) | Dr. Beier |
 | 17:10–17:30 | Discussion & Wrap-up | Open Q&A, summary of key takeaways, and outlook for future development | |
 
 ## Target audience
