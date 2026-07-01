@@ -18,7 +18,7 @@ Systems biology, multi-omics integration and modeling
 | Time | Session | Description | Contributor |
 | --- | --- | --- | --- |
 | 13:45–13:55 | Welcome & Objectives | Introduction by organizers, overview of tutorial goals and structure | |  
-| 13:55–14:35 | Session 1 | Overview of metadata standards in plant sciences and federated discovery | Dr. Pommier |
+| 13:55–14:35 | Session 1 | [Overview of metadata standards in plant sciences and federated discovery](presentations/Session1_metadata_standards_federated_discovery.pdf) | Dr. Pommier |
 | 14:35–15:15 | Session 2 | [Approaches for orthology, annotation, and cross-species comparisons](presentations/Session2_orthology_annotation_comparisons.pdf) | Dr. Zagorščak|
 | 15:15–15:30 | Coffee Break & Networking | | |
 | 15:30–16:10 | Session 3 | [Knowledge graph approaches for linking datasets to uncover new biological insights](presentations/Session3_Knowledge_graph_approaches.pdf) | Dr. Bleker |
