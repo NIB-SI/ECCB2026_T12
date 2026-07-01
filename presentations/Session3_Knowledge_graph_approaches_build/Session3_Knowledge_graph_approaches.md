@@ -2,6 +2,7 @@
 marp: true
 title: Knowledge graph approaches for linking datasets to uncover new biological insights
 paginate: true
+header: Knowledge graph approaches for linking datasets to uncover new biological insights
 style: |
   section {
     --ink: #20281f;
@@ -15,30 +16,25 @@ style: |
 
     font-family: "Liberation Sans", Arial, sans-serif;
     color: var(--ink);
-    padding: 56px 68px;
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 40px;
   }
 
   h1, h2, h3 {
-    font-family: "Bitstream Charter", Georgia, serif;
     font-weight: normal;
     color: var(--canopy);
   }
 
   h1 {
-    font-size: 1.55em;
-    line-height: 1.25;
     border-bottom: 3px solid var(--rule);
     padding-bottom: 0.3em;
   }
 
   h2 {
-    font-size: 1.3em;
     border-bottom: 2px solid var(--rule);
-    padding-bottom: 0.2em;
-  }
-
-  ul, ol {
-    line-height: 1.5;
   }
 
   ul > li::marker {
@@ -49,12 +45,8 @@ style: |
     color: var(--canopy);
   }
 
-  code {
-    font-family: "Liberation Mono", monospace;
-    background: var(--mist);
-    color: var(--canopy);
-    border-radius: 4px;
-    padding: 0.1em 0.4em;
+  pre > code {
+    font-size: 20px;
   }
 
   a {
@@ -83,9 +75,7 @@ style: |
   table th {
     background: var(--canopy);
     color: var(--paper);
-    font-family: "Bitstream Charter", Georgia, serif;
     font-weight: normal;
-    padding: 0.4em 0.8em;
   }
 
   table td {
@@ -97,6 +87,10 @@ style: |
     background: var(--mist);
   }
 
+  p, li, td {
+    font-size: 20px;
+  }
+  
   footer {
     font-family: "Bitstream Charter", Georgia, serif;
     font-style: italic;
@@ -104,14 +98,26 @@ style: |
     font-size: 0.55em;
   }
 
+  header {
+    margin: 0;
+    position: absolute;
+    top: 4px;
+    right: 30px;
+    color: var(--canopy-light);
+    font-size: 14px; 
+    text-align: right;
+  }
+
   section::after {
-    font-family: "Liberation Sans", Arial, sans-serif;
     color: var(--canopy-light);
   }
 
   /* Title slide */
   section.lead {
     background: var(--mist);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   section.lead h1 {
@@ -127,6 +133,10 @@ style: |
     height: 4px;
     background: var(--canopy);
     margin-top: 0.5em;
+  }
+
+  section {
+    border-top: 10px solid var(--canopy);
   }
 
   /* Hands-on slides: warm soil accent marks the interactive thread */
@@ -152,10 +162,20 @@ style: |
     /* Center align content vertically */
     align-items: center;
   }
+  
+  img[alt~="align-bottom-centered"] {
+    position: absolute;
+    bottom: 2px;
+    left: 50%; /* centering */
+    transform: translateX(-50%); /* centering */
+    margin: 0; /* control space to bottom end of slide */
+  }
+
 
 ---
 
 <!-- _class: lead -->
+<!-- _header: "" -->
 
 # Knowledge graph approaches for linking datasets to uncover new biological insights
 
@@ -290,7 +310,7 @@ This is what separates a knowledge graph from a static lookup table — connecti
 
 <div>
 
-![w:220](images/placeholder.png)
+![w:220](images/placeholder-image.svg)
 *A Neo4j graph database showing labelled nodes (`XXX`, `XXX`) and typed edges (`XXX`, `XXX`)*
 
 </div>
@@ -449,6 +469,8 @@ We've seen what each resource is built for — now let's actually use them.
 ## Hands-on: AgroLD
 
 <!-- _class: hands-on -->
+<!-- _header: "[v2.agrold.org/agrold](https://v2.agrold.org/agrold)" -->
+
 
 <div class="columns">
 
@@ -478,6 +500,7 @@ Using the browser interface:
 ## Hands-on: KnetMiner (Plants Lite)
 
 <!-- _class: hands-on -->
+<!-- _header: "[app.knetminer.com/plants-lite](https://app.knetminer.com/plants-lite)" -->
 
 <div class="columns">
 
@@ -504,36 +527,31 @@ Using the browser interface. Select the (free) **Plants Lite** resource:
 
 ---
 
-## Hands-on: KnetMiner (Plants Lite)
-<!-- _class: hands-on -->
 ## Worked Example: Grain Colour & Pre-Harvest Sprouting (PHS)
 
-<div class="columns">
-<div>
+<!-- _class: hands-on -->
+<!-- _header: "[app.knetminer.com/plants-lite](https://app.knetminer.com/plants-lite)" -->
+
+<style scoped>
+  section p, li, td {
+    font-size:18px;
+  }
+</style>
 
 Start from a **wheat gene list** and the traits *"grain colour and pre-harvest sprouting"*:
-
 - **Trait dissection** — KnetMiner breaks the trait into sub-components (seed dormancy, testa pigmentation, ABA signalling) rather than treating it as one keyword
 - **Semantic motif search** — runs 180+ pre-defined motif queries per gene, scoring each for evidence linking it to grain colour, dormancy, and sprouting resistance
 - **Interactive gene–trait network** — builds a knowledge graph connecting genes, QTLs, publications, and ontology terms, ranked by evidence
 - **Graph Chat** — ask follow-up questions in natural language (*"which of these genes also affect root architecture?"*); the agent reasons directly over the constructed KG, not just text
 
-[app.knetminer.com/plants-lite](https://app.knetminer.com/plants-lite)
-
-</div>
-<div>
-
-<img width="3307" height="1038" alt="Knetminer-example-graph" src="https://github.com/user-attachments/assets/942def5e-8127-416c-a6e7-0d97baf24dfd" />
-<!-- *Placeholder: screenshot of the gene-trait network for the PHS/grain colour worked example* -->
-
-</div>
-</div>
+![h:360 align-bottom-centered](images/knetminer-worked-example.png)
 
 ---
 
 ## Hands-on: SKM
 
 <!-- _class: hands-on -->
+<!-- _header: "[skm.nib.si](https://skm.nib.si)" -->
 
 <div class="columns">
 
