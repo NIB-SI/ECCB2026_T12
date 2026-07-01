@@ -352,7 +352,7 @@ These are the questions a single database or a literature search struggles to an
 | Resource | Built for | URL |
 |---|---|---|
 | **AgroLD** <br> ![h:50](images/agroLD-logo.png) | Broad-scale Semantic Web integration across many crops | [v2.agrold.org/agrold](https://v2.agrold.org/agrold) |
-| **KnetMiner** <br> ![h:50](images/KnetMiner_logo.svg) | Gene-centric candidate discovery, strong GWAS/QTL tie-in | [knetminer.com](https://knetminer.com) |
+| **KnetMiner** <br> ![h:50](images/KnetMiner800_name.png) | Gene-centric candidate discovery, strong GWAS/QTL tie-in | [knetminer.com](https://knetminer.com) |
 | **SKM** <br>  ![h:50](images/skm_logo_large.png) | Curated molecular interactions for plant stress signalling + hypothesis generation | [skm.nib.si](https://skm.nib.si) |
 
 <!-- _footer: "This is not an exhaustive list — just three ELIXIR-relevant examples" -->
@@ -500,6 +500,33 @@ Using the browser interface. Select the (free) **Plants Lite** resource:
 
 </div>
 
+</div>
+
+---
+
+## Hands-on: KnetMiner (Plants Lite)
+<!-- _class: hands-on -->
+## Worked Example: Grain Colour & Pre-Harvest Sprouting (PHS)
+
+<div class="columns">
+<div>
+
+Start from a **wheat gene list** and the traits *"grain colour and pre-harvest sprouting"*:
+
+- **Trait dissection** — KnetMiner breaks the trait into sub-components (seed dormancy, testa pigmentation, ABA signalling) rather than treating it as one keyword
+- **Semantic motif search** — runs 180+ pre-defined motif queries per gene, scoring each for evidence linking it to grain colour, dormancy, and sprouting resistance
+- **Interactive gene–trait network** — builds a knowledge graph connecting genes, QTLs, publications, and ontology terms, ranked by evidence
+- **Graph Chat** — ask follow-up questions in natural language (*"which of these genes also affect root architecture?"*); the agent reasons directly over the constructed KG, not just text
+
+[app.knetminer.com/plants-lite](https://app.knetminer.com/plants-lite)
+
+</div>
+<div>
+
+<img width="3307" height="1038" alt="Knetminer-example-graph" src="https://github.com/user-attachments/assets/942def5e-8127-416c-a6e7-0d97baf24dfd" />
+<!-- *Placeholder: screenshot of the gene-trait network for the PHS/grain colour worked example* -->
+
+</div>
 </div>
 
 ---
