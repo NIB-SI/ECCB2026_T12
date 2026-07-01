@@ -170,8 +170,6 @@ style: |
     transform: translateX(-50%); /* centering */
     margin: 0; /* control space to bottom end of slide */
   }
-
-
 ---
 
 <!-- _class: lead -->
@@ -188,10 +186,10 @@ Dr. Carissa Bleker, National Institute of Biology, Slovenia
 ## What this session covers
 
 - Why knowledge graphs matter for your work
+- The fundamental ingredients: Graphs and Ontologies
 - What kinds of questions become answerable that weren't before
 - A quick tour of the plant KG landscape
 - **Hands-on:** querying real plant knowledge graphs yourself
-- Where this is heading: natural-language access to graphs
 
 ---
 
@@ -262,9 +260,9 @@ Much of the important information in biology lives in the *relationships*, not j
 
 Represented as **triples**: Subject *predicate* Object
 
-Gene *encodes* Transcription factor
-Transcription factor *regulates* Target
-ABA *is a* Phytohormone
+* Gene *encodes* Transcription factor
+* Transcription factor *regulates* Target
+* ABA *is a* Phytohormone
 
 ---
 
@@ -278,7 +276,7 @@ Examples:
 - Start at a stress phenotype → follow `associated with` → reach a candidate gene → follow `regulates` → get a list of **upstream regulators** to investigate
 - Start at a significant locus (e.g. a GWAS hit) → follow `is part of` → reach the genes in that region → follow `interacts with` → narrow down to the most plausible **candidate genes**
 
-These are single, easy-to-state graph queries, not a chain of separate database lookups stitched together manually
+These are single, easy-to-state graph queries, not a chain of separate database lookups stitched together manually.
 
 ---
 
@@ -293,6 +291,19 @@ Explicit relationships also let you **infer** new facts, not just retrieve store
 - → Therefore: *Gene A* `confers resistance to` **some** Fungal disease(s)
 
 This is what separates a knowledge graph from a static lookup table — connections you didn't explicitly store can still be derived from the ones you did.
+
+---
+
+## Foundations: What is an ontology?
+
+<!-- _footer: "Adapted from the BioCypher Workshop slides (Heidelberg, June 2026), CC-BY 4.0" -->
+
+**To connect data, graphs need a shared language.**
+
+- A controlled vocabulary for a domain: defines classes, subclass relationships, and how entities relate
+- Matters in biology because the same thing can be named, grouped, or interpreted differently across datasets
+- Example: *"drought tolerance," "water-deficit tolerance,"* and *"drought resistance"* overlap in everyday speech, but aren't necessarily the same defined trait across phenotyping databases
+- An ontology (e.g., the Plant Trait Ontology) fixes what's meant and how it relates to other traits—this is what lets a knowledge graph connect entities from different sources consistently
 
 ---
 
@@ -311,7 +322,7 @@ This is what separates a knowledge graph from a static lookup table — connecti
 <div>
 
 ![w:220](images/placeholder-image.svg)
-*A Neo4j graph database showing labelled nodes (`XXX`, `XXX`) and typed edges (`XXX`, `XXX`)*
+*A Neo4j graph database showing labelled nodes and typed edges*
 
 </div>
 
@@ -319,18 +330,7 @@ This is what separates a knowledge graph from a static lookup table — connecti
 
 ---
 
-## What is an ontology?
-
-<!-- _footer: "Adapted from the BioCypher Workshop slides (Heidelberg, June 2026), CC-BY 4.0" -->
-
-- A controlled vocabulary for a domain: defines classes, subclass relationships, and how entities relate
-- Matters in biology because the same thing can be named, grouped, or interpreted differently across datasets
-- Example: *"drought tolerance," "water-deficit tolerance,"* and *"drought resistance"* overlap in everyday speech, but aren't necessarily the same defined trait across phenotyping databases — an ontology (e.g. the Plant Trait Ontology) fixes what's meant and how it relates to other traits
-- This is what lets a knowledge graph connect entities from different sources consistently
-
----
-
-## What a knowledge graph adds
+## What a knowledge graph adds: Summary
 
 <div class="columns">
 
@@ -364,6 +364,33 @@ This is a shift from **lookup** to **traversal and reasoning**.
 - **Cross-omics contextualisation** — place your experimental hits (transcriptomics, proteomics) onto prior knowledge to see what's already known
 
 These are the questions a single database or a literature search struggles to answer directly.
+
+---
+
+## The future: Beyond manual querying
+
+<div class="columns">
+
+<div>
+
+Answering these questions often require either a developer to build an tool/interface, or *you* to write manual queries.
+
+**Knowledge graphs are a strong foundation for retrieval-augmented generation (RAG)** — letting an LLM do that work instead:
+
+- Selective retrieval of structured content from an external resource
+- Answers stay grounded in explicit graph facts, not free-text guessing
+- Natural language interaction while maintaining the traceability of a real query
+
+</div>
+
+<div>
+
+![w:180](images/placeholder-image.svg)
+<!-- *Placeholder: flow diagram (question → LLM → graph → answer)* -->
+
+</div>
+
+</div>
 
 ---
 
@@ -439,7 +466,7 @@ These are the questions a single database or a literature search struggles to an
 
 - Two complementary graphs:
   - **PSS** — curated, mechanistic *P*lant *S*tress *S*ignalling model (800+ _reactions_)
-  - **CKN** — *C*omprehensive molecular interaction *k*nowledge *n*etwork (26,000+ molecules, 480,000+ interactions)
+  - **CKN** — *C*omprehensive molecular interaction *k*nowledge *n*etwork (480,000+ interactions)
 - Built by domain experts through systematic literature/database curation
 - Best fit for **plant stress biology**, mechanistic hypothesis generation, and quantitative modelling
 
@@ -471,16 +498,15 @@ We've seen what each resource is built for — now let's actually use them.
 <!-- _class: hands-on -->
 <!-- _header: "[v2.agrold.org/agrold](https://v2.agrold.org/agrold)" -->
 
-
 <div class="columns">
 
 <div>
 
 Using the browser interface:
 
-- **Quick Search** — keyword search across the whole knowledge base (e.g. a gene name)
-- **Advanced Search** — pick an entity type (gene, protein, pathway…) and search within it, results as a sortable/downloadable table
-- **SPARQL Query Editor** — comes with ready-made example queries you can run as-is, e.g. *"find all genes involved in the Calvin cycle"* — no need to write SPARQL yourself
+- **Quick Search** — keyword search across the whole knowledge base
+- **Advanced Search** — pick an entity type and search within it
+- **SPARQL Query Editor** — comes with ready-made example queries you can run as-is
 
 [v2.agrold.org/agrold](https://v2.agrold.org/agrold)
 
@@ -489,8 +515,6 @@ Using the browser interface:
 <div>
 
 ![w:180](images/placeholder-image.svg)
-<!-- *Placeholder: screenshot of the Quick Search or SPARQL Query Editor in action; useful fallback if live demo/wifi has issues* -->
-
 </div>
 
 </div>
@@ -564,36 +588,33 @@ Using the browser interface:
 
 [skm.nib.si/pss](https://skm.nib.si/pss) OR [skm.nib.si/ckn](https://skm.nib.si/ckn)
 
-This covers most everyday questions. For more targeted, repeatable, or programmatic interrogation, we turn to **skm-tools** next.
+For more targeted, repeatable, or programmatic interrogation, we turn to **skm-tools** next.
 
 </div>
 
 <div>
 
 ![w:180](images/placeholder-image.svg)
-<!-- *Placeholder: screenshot of a PSS or CKN subnetwork view; useful fallback if live demo/wifi has issues* -->
-
 </div>
 
 </div>
 
 ---
 
-## Hands-on: querying SKM yourself
+## Hands-on: Querying SKM yourself
 
 <!-- _class: hands-on -->
 
-We'll now query SKM directly using [**skm-tools**](https://github.com/NIB-SI/skm-tools), a Python toolkit built for the purpose or interrogating PSS and CKN beyond what the web app supports.
+We'll now query SKM directly using [**skm-tools**](https://github.com/NIB-SI/skm-tools), a Python toolkit for interrogating PSS and CKN.
 
-Notebook: `placeholder link to notebook on GitHub`
+**Notebook:** `[link to notebook on GitHub]`
 
-To run: 
 **Option A — Google Colab** (no install, runs in browser)
-`placeholder link`
+`[link]`
 
 **Option B — Local Python**
-```
-pip install "skm-tools @ git+https://github.com/NIB-SI/skm-tools.git"
+```python
+pip install "skm-tools @ git+[https://github.com/NIB-SI/skm-tools.git](https://github.com/NIB-SI/skm-tools.git)"
 ```
 
 Note: Visualisation of network analyses results in Cytoscape requires a local Cytoscape install and won't work in Colab.
@@ -627,41 +648,15 @@ Note: Visualisation of network analyses results in Cytoscape requires a local Cy
 
 ---
 
-## Case study — [placeholder]
+## Worked Example: [placeholder]
 
 <!-- _class: hands-on -->
 
+Applying what we have learned to a specific biological question:
 
----
+*(case study)*
 
-## The future? Beyond manual querying
-
-<div class="columns">
-
-<div>
-
-What we just worked through required either a developer to have implemented the functionality in a user interface (search interface, API, …), or *you* to write queries/scripts and manually chain results together for any multi-step question.
-
-</div>
-
-<div>
-
-![w:180](images/placeholder-image.svg)
-<!-- *Placeholder: flow diagram (question → LLM → graph → answer)* -->
-
-</div>
-
-</div>
-
----
-
-**Knowledge graphs are a strong foundation for retrieval-augmented generation (RAG)** — letting an LLM do that work instead:
-
-- Selective retrieval of structured content from an external resource
-- Answers stay grounded in explicit graph facts, not free-text guessing
-- Natural language interaction with the graph's content, while maintaining the traceability of a real query — without anyone having to write one
-
-The goal: the same trustworthy, structured answers, but without a human needing to manually preparing queries and analyses.
+*(Walkthrough of the notebook results here)*
 
 ---
 
@@ -700,15 +695,17 @@ The goal: the same trustworthy, structured answers, but without a human needing 
 - AgroLD: [v2.agrold.org/agrold](https://v2.agrold.org/agrold)
 - KnetMiner: [knetminer.com](https://knetminer.com)
 
+</div>
+
+<div>
+
+**Contributors**
+- Keywan Hassani-Pak
+
 Several slides on knowledge graph basics and ontologies adapted from BioCypher Workshop materials (ssciwr/slides-biocypher), CC-BY 4.0
 
 </div>
 
-**Contributors**
+**Questions welcome!**
 
-
-
-
-<div>
-
-Questions welcome
+</div>
