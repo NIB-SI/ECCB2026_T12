@@ -456,7 +456,7 @@ Answering these questions often require either a developer to build a tool/inter
 
 <!-- | Resource | Built for | URL |
 |---|---|---|
-| **AgroLD** <br> ![h:50](images/agroLD-logo.png) | Broad-scale Semantic Web integration across many crops | [v2.agrold.org/agrold](https://v2.agrold.org/agrold) |
+| **AgroLD** <br> ![h:50](images/agroLD-logo.png) | Broad-scale Semantic Web integration across many crops | [agrold.org](https://www.agrold.org) |
 | **KnetMiner** <br> ![h:50](images/KnetMiner800_name.png) | Gene-centric candidate discovery, strong GWAS/QTL tie-in | [knetminer.com](https://knetminer.com) |
 | **SKM** <br>  ![h:50](images/skm_logo_large.png) | Curated molecular interactions for plant stress signalling + hypothesis generation | [skm.nib.si](https://skm.nib.si) |
  -->
@@ -464,7 +464,7 @@ Answering these questions often require either a developer to build a tool/inter
 
 | Resource | Built for | URL |
 |---|---|---|
-| ![h:50](images/agroLD-logo.png) | Broad-scale Semantic Web integration across many crops | [v2.agrold.org/agrold](https://v2.agrold.org/agrold) |
+| ![h:50](images/agroLD-logo.png) | Broad-scale Semantic Web integration across many crops | [agrold.org](https://agrold.org) |
 | ![h:50](images/KnetMiner800_name.png) | Gene-centric candidate discovery, strong GWAS/QTL tie-in | [knetminer.com](https://knetminer.com) |
 | ![h:50](images/skm_logo_large.png) **Stress Knowledge Map** | Curated molecular interactions for plant stress signalling + hypothesis generation | [skm.nib.si](https://skm.nib.si) |
 | PlantMetWiki | RDF-based linked data for plant metabolic pathways, built from PlantCyc across 500+ species | [plantmetwiki.bioinformatics.nl](https://plantmetwiki.bioinformatics.nl/) |
@@ -497,14 +497,14 @@ Answering these questions often require either a developer to build a tool/inter
 
 <br>
 
-[v2.agrold.org/agrold](https://v2.agrold.org/agrold)
+[agrold.org](https://agrold.org)
 
 </div>
 
 <div>
 
-![w:200](images/placeholder-image.svg)
-*Placeholder: screenshot of the AgroLD homepage or Quick Search interface*
+![w:200](images/agrold-webapp-screenshot.png)
+*Screenshot of the AgroLD homepage*
 
 </div>
 
@@ -600,7 +600,7 @@ We've seen what each resource is built for — now let's actually use them.
 ## Hands-on: AgroLD
 
 <!-- _class: hands-on -->
-<!-- _header: "[v2.agrold.org/agrold](https://v2.agrold.org/agrold)" -->
+<!-- _header: "[agrold.org](https://agrold.org)" -->
 
 <div class="columns">
 
@@ -608,17 +608,17 @@ We've seen what each resource is built for — now let's actually use them.
 
 Using the browser interface:
 
-- **Quick Search** — keyword search across the whole knowledge base
+- **Quick Search** — keyword search across the whole knowledge base (e.g., drought resistance)
 - **Advanced Search** — pick an entity type and search within it
 - **SPARQL Query Editor** — comes with ready-made example queries you can run as-is
 
-[v2.agrold.org/agrold](https://v2.agrold.org/agrold)
+[agrold.org](https://agrold.org)
 
 </div>
 
 <div>
 
-![w:180](images/placeholder-image.svg)
+![w:180](images/quick-search-screenshot.png)
 </div>
 
 </div>
