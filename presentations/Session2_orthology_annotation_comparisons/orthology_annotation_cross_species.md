@@ -494,8 +494,8 @@ orthofinder -f "$input_dir" \
 
 ## RBH (Reciprocal Best Hits)
 
-![width:700px](figs/RBH.jpg)
-<small><small>https://doi.org/10.1371/journal.pone.0101850
+![width:700px](figs/RBH.png)
+<small><small>Goodstadt, L. (2009) Slideserve
 
 > Note: Reciprocal best hits are not a logically sufficient condition for orthology (arXiv:0706.0117)
 </small></small>
@@ -736,17 +736,7 @@ omamer mkdb --db Pentapetalae.h5 --oma_path ./oma_path/ \
 ## FastOMA
 
 
-<pre><code>
-nextflow run ../FastOMA.nf -profile standard \
-  --input_folder ./input \
-  --output_folder output \
-  --omamer_db ./input/Viridiplantae.h5 \
-  --max_cpus 64 \
-  --fasta_header_id_transformer noop \
-  --with-report \
-  -c ./input/my_custom.config | tee run4.log
-  
-  
+<pre><code>  
 nextflow run ../FastOMA/FastOMA.nf -profile standard \
   --input_folder ./input \
   --output_folder output \
@@ -754,7 +744,7 @@ nextflow run ../FastOMA/FastOMA.nf -profile standard \
   --max_cpus 24 \
   --fasta_header_id_transformer noop \
   --with-report \
-  -c ./input/my_custom.config | tee run4_Pentapetalae.log
+  -c ./input/my_custom.config | tee run_Pentapetalae.log
 </code></pre>
 
 
@@ -885,7 +875,7 @@ Rule: once a from_geneID is assigned, it cannot be reassigned
 
 - Normalise IDs + collapse multiple BINs per gene
 
-> Note: Each species required custom ID regex normalisation (case fixes, isoform stripping, special translation tables fo <em>stu</em>)
+> Note: Each species required custom ID regex normalisation (case fixes, isoform stripping, special translation tables for <em>stu</em>)
 
 > MapMan4 brings **independent biological context** — a single method's ortholog call becomes credible when both genes share the same functional BIN
 
@@ -962,10 +952,22 @@ All steps are reproducible.
 
 ---
 
+
 ## Summary
 
+<table class="noborder" style="width:100%; table-layout:fixed;"><tr>
+<td style="width:60%; vertical-align:top;">
 
 ![w:500](figs/e.g..png)
+
+</td>
+
+<td style="width:60%; vertical-align:top;">
+
+![w:500](figs/Fig4.png)
+
+</td>
+</tr></table>
 
 ---
 
