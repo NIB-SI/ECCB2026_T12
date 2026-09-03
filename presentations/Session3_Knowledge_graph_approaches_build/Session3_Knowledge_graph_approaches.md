@@ -704,6 +704,42 @@ Using the browser interface:
 
 ---
 
+## SKM case studies
+
+<!-- _class: hands-on -->
+
+![w:1100](images/skm-networks-cases.svg)
+
+- Bleker et al. (2024) *Plant communications.* [doi:10.1016/j.xplc.2024.100920](https://doi.org/10.1016/j.xplc.2024.100920)
+- Žnidarič et al (2025) *Plant Direct* [doi:10.1002/pld3.70035](https://doi.org/10.1002/pld3.70035)
+
+
+---
+
+## Making your own knowledge graph with BioCypher
+
+<div class="columns">
+
+<div class="img-col">
+
+
+![w:900](images/BioCypher-BioChatter-Complete.svg
+)
+*BioCypher architecture*
+
+</div>
+
+<div style="align-self:center;">
+
+- [biocypher.org](https://biocypher.org) is a framework for building knowledge graphs from heterogeneous biological data sources
+<!-- - https://github.com/biocypher/biocypher-cookiecutter-template -->
+- [biocypher-cookiecutter-template](https://github.com/biocypher/biocypher-cookiecutter-template) is a ready-to-use template for building your own KG
+- BioCypher: Lobentanzer et al. (2023) *Nature Biotechnology.* [doi:10.1038/s41587-023-01848-y](https://doi.org/10.1038/s41587-023-01848-y)
+
+</div>
+
+---
+
 ## Where this fits in the bigger picture
 
 <div class="columns">
